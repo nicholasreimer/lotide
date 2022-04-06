@@ -1,14 +1,8 @@
 /* INSTRUCTIONS:
 -This function should take in a collection of items and return counts for a specific subset of those items. 
 -it will also be given an idea of which items we care about and it will only count those, ignoring the others.
-
--
-
-STEPS:
--create a function named countOnly that takes two args
--
-
 */
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`🟢 Assertion Passed: ${actual}  ===  ${expected}`);
@@ -34,7 +28,6 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
-
 
 const firstNames = [
   "Karl",
