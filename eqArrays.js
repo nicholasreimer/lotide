@@ -14,32 +14,17 @@ if FALSE: function returns FASLE
 */
 
 let eqArrays = function(arOne, arTwo) {
-  if (arOne.length === arTwo.length) {
+  if (arOne.length !== arTwo.length) {
+    return false;
+  }
 
-    for (let i = 0; i < arOne.length; i++) {
-
-      if (arOne[i] !== arTwo[i]) {
-        return false
-      }
+  for (let i = 0; i < arOne.length; i++) {
+    if (arOne[i] !== arTwo[i]) {
+      return false;
     }
-    return true
   }
-  return false
+  return true;
 };
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢 Assertion Passed: ${actual}  ===  ${expected}`);
-  } else {
-    console.log(`🔴 Failed: ${actual} !== ${expected}`);
-  }
-};
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, "3"]), true);
-
-
-
-
 
 
 /*
@@ -49,7 +34,5 @@ TEST:
 
 
 
-// TEST CODE:
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 6);
+
 */
