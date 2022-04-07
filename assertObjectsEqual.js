@@ -50,6 +50,6 @@ const dc = { d: ["2", 3], c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 //console.log(eqObjects(cd, cd2)); // => false
 
-console.log(assertObjectsEqual(cd, cd2));
+console.log(assertObjectsEqual(cd, cd2))
 
 

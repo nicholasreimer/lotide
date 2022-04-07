@@ -8,44 +8,17 @@
 The without function should be returning a new array and not modify the original array that is passed in. Let's write a test case to ensure this:
 
 STEPS:
-1.) create a function called without() that takes two arg arrays : 
+-create a function called without() that takes two arg arrays, within the func declare a empty var named output (will be future func output)
 
-2.) within the function use .filter() to filter through the source array arg
+-for loop cycles through all the elements within the source array
 
-3.) create another function that will be used by filter: tThe func will compare the each element value of source to each element value of toBeRemoved
+-within the for loop: if the value of source is NOT equal to the value of tobeRemoved then:
 
-4.) each element within source that does NOT match with any of the elements within toBeRemoved is logged to a new array
+-push the value of that element from source to the array within var output
 
-5.) the output of the func is the result of the filtered array
+-the output of the func is the array within var output
 */
 
-
-const without = function(source, toBeRemoved) {
-
-  //filter throught the source array and remove and return only the value that is not present in toBeRemoved. 
-  const result = source.filter(removeElems(toBeRemoved))
-
-
-  function removeElems(array) {    //this function removes any elements 
-    for (let i = 0; i < toBeRemoved.length; i++) {
-      if (source[i] === elemsToRemove[i]) {
-
-      }
-    }
-    return result
-  }
-
-
-/* TEST:
-INPUT:
-1.) without([1, 2, 3], [1])
-2.) without(["1", "2", "3"], [1, 2, "3"]) 
-
-OUTPUT:
-1.) [2, 3]
-2.) ["1", "2"]
-
-//this function can compare two arrays and determine if they are equal
 let eqArrays = function(arOne, arTwo) {
   if (arOne.length !== arTwo.length) {
     return false;
@@ -59,15 +32,41 @@ let eqArrays = function(arOne, arTwo) {
   return true;
 };
 
-//this function uses the eqArrays function (from above) to return a console.log that will
-//tell you wether two arrays are equal or not
 const assertArraysEqual = function(arOne, arTwo) {
-
   if (eqArrays(arOne, arTwo)) {
     console.log("🟢 The Arrays are Equal");
   } else {
     console.log("🔴 The Arrays are NOT Equal");
   }
 };
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+
+const without = function(source, toBeRemoved) {
+  let output = []
+
+  for (let i = 0; i < source.length; i++) {
+    if (source[i] !== toBeRemoved[i]) {
+      output.push(source[i])
+    }
+  }
+  return output;
+};
+
+console.log(without(["1", "2", "3"], [1, 2, "3"]))
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+// no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+
+/* TESTS FOR WITHOUT FUNCTION
+INPUT:
+1.) without([1, 2, 3], [1])
+2.) without(["1", "2", "3"], [1, 2, "3"]) 
+
+OUTPUT:
+1.) [2, 3]
+2.) ["1", "2"]
 */
