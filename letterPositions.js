@@ -7,19 +7,18 @@ OUTPUT: {s:0, a:1,3, m:2}
 STEPS:
 -create a function that will take a single string as its argument
 -create a var named results that will become the function output and giv it an intial value of an empty object
--a new var named newString is made equal the value of arg string after the following methods are applied to it:
-1.) toLowerCase() - sets all the letters within string to lower case
-2.) .replace(/\s/g, '') - removes all spaces in the string
-3.) .split() - seperates each letter within string so that we can loop through the letters one by one
+-a for loop cycles thorugh each letter of the arg string
 
--now we cant take newVar which is an array of individual letter elements and loop through each element with a for loop
+for each loop cycle:
+IF: the value of string at the current loop index is NOT equal to " " (empty space) enter the next conditional: (this avoids having " " getting added to the output object)
+IF: the value of string at the current loop index is already present inside of the output object, push the current index position value to that array
+IF: the value of string at the current loop index is NOT present inside of the output object, create a new key inside of the output object and set its 
+value to an array containg the current index position value
 
-Within the Loop:
--if this index value exsists inside output already add the current index value to output as well
--if this letter does NOT exsist within output, add it and set its initial value to 1
+-return the value of the ouput object as the fucntions output
 
 
--
+
 */
 const letterPositions = function(string) {
   let output = {};
