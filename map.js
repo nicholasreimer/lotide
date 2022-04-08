@@ -62,3 +62,12 @@ const results3 = map(people, people => people.length);
 //anon func: prints the .length value of each element
 console.log(results3);
 console.log(assertArraysEqual(people, results3));
+
+
+//test cases to try from Charles
+const testArray1 = ['bacon', 'gravy', 'soda'];
+const testArray2 = [1, 2, 3]
+const testArray3 = [3, 2, 1]
+assertArraysEqual(map(testArray1, word => word[0]), ['b', 'g', 's']);
+assertArraysEqual(map(testArray2, num => num * 2), [2, 4, 6]);
+assertArraysEqual(map(testArray3, num => num > 2), [true, false, false]); 
