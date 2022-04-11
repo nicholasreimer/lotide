@@ -59,13 +59,14 @@ const findKey = function(object, callback) {
   return output;
 };
 
+/*
 //TEST CASES FOR findKey FUNCTION:
 
-/*TEST 1: 
+TEST 1: 
 //FUNC ARGS: 
 1.)object with 6 properties each containing a property as its key.value
 2.) anon func that checks if the value within the stars key is directly equal to 2
-*/
+
 
 //this console.log simply returns the output that the next function is testing:
 console.log(findKey(
@@ -90,4 +91,4 @@ assertArraysEqual(findKey(
   },
   x => x.stars === 2), "noma");
 
-
+*/

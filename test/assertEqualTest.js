@@ -1,7 +1,7 @@
-const assertEqual = require('../assertEqual');
+const assertArraysEqual = require('../assertArraysEqual');
 
 // TEST CODE:
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 6);
+assertArraysEqual("Lighthouse Labs", "Lighthouse Labs");
+assertArraysEqual(1, 6);
 
 module.exports = assertEqual;

@@ -50,7 +50,7 @@ const map = function(array, callback) {
 };
 
 //TEST CASES FOR map FUNCTION:
-
+/*
 //TEST 1: anon func: seperates the first letter of each word
 const words = ["ground", "control", "to", "major", "tom"];
 console.log(map(words, word => word[0]));
@@ -65,4 +65,4 @@ assertArraysEqual(map(numbers, num => num * 2), [2, 8, 14, 20]);
 const people = ['bob', 'charlie', 'franklin', 'homeskillet'];
 console.log(map(people, people => people.length));
 assertArraysEqual(map(people, people => people.length), [3, 7, 8, 11]);
-
+*/

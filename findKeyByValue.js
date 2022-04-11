@@ -33,8 +33,8 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
-console.log(findKeyByValue(bestTVShowsByGenre, "That '70s Show"));
+//console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
+//console.log(findKeyByValue(bestTVShowsByGenre, "That '70s Show"));
 
 /* EXAMPLE:
 

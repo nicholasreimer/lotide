@@ -58,6 +58,7 @@ const takeUntil = function(array, callback) {
   return output;
 };
 
+/*
 //TAKE UNTIL FUNCTION TESTS
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 console.log(takeUntil(data1, x => x < 0));
@@ -70,3 +71,4 @@ assertArraysEqual(takeUntil(data2, x => x === ','), ['I\'ve', 'been', 'to', 'Hol
 const testArray1 = [1, 2, 3];
 console.log(takeUntil(testArray1, x => x > 2));
 assertArraysEqual(takeUntil(testArray1, x => x > 2), [1, 2]);
+*/
